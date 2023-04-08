@@ -1,10 +1,7 @@
 import 'package:expenses/models/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'transaction_item.dart';
-
-
 
 class TransactionList extends StatelessWidget {
 
@@ -47,7 +44,10 @@ class TransactionList extends StatelessWidget {
             itemCount: transaction.length,
             itemBuilder: ((context, index) {
               final tr = transaction[index];
-              return TransactionItem(tr: tr, onRemove: onRemove);
+              return TransactionItem(
+                key: GlobalObjectKey(tr.id),
+                tr: tr, 
+                onRemove: onRemove);
             }
           ),
     );
