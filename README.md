@@ -1,4 +1,4 @@
-# expenses
+<h1 style='color: blue'>expenses<h1>
 
 <h2>Description</h2>
 
